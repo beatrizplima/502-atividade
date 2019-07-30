@@ -19,13 +19,19 @@ if(localStorage.nome){
     dn.style.display = "none";
 }
 else{
-    texto.innerHTML = `Seja bem vindo ${localStorage.nome}`;
-    localStorage.setItem('nome', caixaTexto.value);
-    naoSou.innerHTML = `Não é ${localStorage.nome}?`;
-    function acessar()
+    
 }
 function  limpar(){
     localStorage.clear();
+}
+
+function acessar(){
+    texto.innerHTML = `Seja bem vindo ${localStorage.nome}`;
+    localStorage.setItem('nome', caixaTexto.value);
+    naoSou.innerHTML = `Não é ${localStorage.nome}?`;
+    caixaTexto.style.display = "none";
+    botao.style.display = "none";
+    dn.style.display = "none";
 }
 
 botao.onclick = acessar;
